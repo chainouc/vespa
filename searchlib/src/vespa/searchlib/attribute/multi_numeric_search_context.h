@@ -52,6 +52,8 @@ public:
         return -1;
     }
 
+    void and_element_ids_into(uint32_t docid, std::vector<uint32_t>& element_ids) const override;
+
     std::unique_ptr<queryeval::SearchIterator> createFilterIterator(fef::TermFieldMatchData* matchData,
                                                                     bool                     strict) override;
     uint32_t get_committed_docid_limit() const noexcept override;

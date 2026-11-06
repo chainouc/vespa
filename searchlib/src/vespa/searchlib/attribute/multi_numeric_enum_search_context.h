@@ -20,6 +20,7 @@ public:
                                   MultiValueMappingReadView<M> mv_mapping_read_view, const EnumStoreT<T>& enum_store);
     MultiNumericEnumSearchContext(MultiNumericEnumSearchContext&& rhs) noexcept = default;
     ~MultiNumericEnumSearchContext() override;
+    void and_element_ids_into(uint32_t docid, std::vector<uint32_t>& element_ids) const override;
 };
 
 } // namespace search::attribute
